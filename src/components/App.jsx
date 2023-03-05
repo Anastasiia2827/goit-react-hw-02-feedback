@@ -1,6 +1,8 @@
 import { GlobalStyle } from './GlobalStyle';
 import React, { Component } from 'react';
 
+import { FeedbackButton } from './FeedbackButton';
+
 
 
 export class App extends Component {
@@ -10,8 +12,12 @@ export class App extends Component {
     bad: 0
   };
   render() {
+    const { good, neutral, bad } = this.state;
     return (
-     <GlobalStyle/>
+      <GlobalStyle />,
+      <FeedbackButton
+          options={{ good: 'Good', neutral: 'Neutral', bad: 'Bad' }}
+        ></FeedbackButton>
     );
   }
 };
