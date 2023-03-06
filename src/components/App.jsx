@@ -5,6 +5,7 @@ import { FeedbackButton } from './FeedbackButton';
 import { Section } from './Section';
 import { Statistics } from './Statistics';
 
+import { Container } from './App.styled';
 
 
 export class App extends Component {
@@ -34,8 +35,8 @@ export class App extends Component {
     const { good, neutral, bad } = this.state;
     const total = this.totalFeedback();
     return (
-      <div>
-        <GlobalStyle />,
+      <Container>
+        <GlobalStyle />
         <Section title="Please leave feedback">
   <FeedbackButton
     options={{ good: 'Good', neutral: 'Neutral', bad: 'Bad' }}
@@ -56,7 +57,7 @@ export class App extends Component {
     ></Statistics>
   )}
 </Section>
-        </div>
+        </Container>
     );
   }
 };
